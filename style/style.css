@@ -1,0 +1,6 @@
+.AppRoot{
+  display: flex;
+}
+.PokemonTable {
+  flex: 0.5;
+}
