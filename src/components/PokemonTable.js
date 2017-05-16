@@ -53,7 +53,6 @@ export default class PokemonTable extends Component {
           data={this.props.list}
           columns={columns}
           manual
-          pages={100}
           onFetchData={this.onPagination}
           pageSizeOptions={[20]}
           sortable={false}
