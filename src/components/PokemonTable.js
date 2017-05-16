@@ -42,7 +42,7 @@ export default class PokemonTable extends Component {
         id: 'avatar',
         // we dont have pokemon id from server
         // hack url field instead 'http://pokeapi.co/api/v2/pokemon/43/'
-        accessor: d => Number((d.substr(d.indexOf('v2/pokemon') + 'v2/pokemon'.length + 1)).replace('/','')),
+        accessor: d => Number((d.url.substr(d.url.indexOf('v2/pokemon') + 'v2/pokemon'.length + 1)).replace('/','')),
         Cell: props => <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${props.value}.png`} alt="avatar"/>,
       },
     ];
