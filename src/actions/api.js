@@ -6,6 +6,7 @@
 
 const superagent = require('superagent');
 import type {ThunkAction} from './types';
+const URL = '//pokeapi.co/api/v2/';
 
 type ResultItemData = {
   url: string,
@@ -44,7 +45,7 @@ function buildQuery(
   if (filter) {
     offset = `?offset=${(filter.page + 1) * filter.pageSize}`;
   }
-  return superagent.get(`http://pokeapi.co/api/v2/${entity}${offset}`);
+  return superagent.get(`${URL}${entity}${offset}`);
 }
 
 module.exports = {
